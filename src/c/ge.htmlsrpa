@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pollroom - live polls in chat</title>
+<style>
+body{margin:0;font:16px system-ui,sans-serif;background:#0f1420;color:#e8ecf5;display:flex;justify-content:center}
+main{width:min(640px,100%);height:100vh;display:flex;flex-direction:column;padding:12px;box-sizing:border-box}
+h1{font-size:20px;margin:4px 0}.sub{color:#8b95ad;font-size:13px;margin-bottom:8px}
+#feed{flex:1;overflow:auto;background:#161d2e;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.msg{background:#212b45;padding:8px 12px;border-radius:10px;align-self:flex-start;max-width:85%;word-break:break-word}.msg.mine{background:#2d5bd6;align-self:flex-end}.msg b{color:#9fb4ff;margin-right:6px;font-size:12px}
+.poll{background:#1d2740;border:1px solid #33416a;border-radius:12px;padding:12px}.q{font-weight:600}.by{color:#8b95ad;font-size:12px;margin:2px 0 8px}
+.opt{position:relative;display:flex;justify-content:space-between;width:100%;margin:4px 0;padding:8px 12px;background:#26314f;color:#e8ecf5;border:1px solid #33416a;border-radius:8px;cursor:pointer;overflow:hidden;font:inherit}
+.opt .bar{position:absolute;left:0;top:0;bottom:0;background:#3a5bd9;opacity:.45}.opt .lab,.opt .n{position:relative}.opt.sel{border-color:#9fb4ff}
+form{display:flex;gap:8px;margin-top:8px}input{flex:1;padding:10px;border-radius:8px;border:1px solid #33416a;background:#161d2e;color:#e8ecf5;font:inherit}
+button.send{padding:10px 16px;border:0;border-radius:8px;background:#2d5bd6;color:#fff;font:inherit;cursor:pointer}
+#status{color:#8b95ad;font-size:12px;margin-top:6px}
+</style></head><body><main>
+<h1>Pollroom</h1><div class="sub">Live chat room where anyone can drop a poll. Type <code>/poll Question | Option A | Option B</code> (2 to 6 options). Everyone sees votes update in real time. Built on the Nexconn Chat SDK (open channel).</div>
+<div id="feed"></div>
+<form id="form"><input id="inp" placeholder="Say something or /poll Lunch? | Pizza | Ramen | Salad" autocomplete="off" maxlength="300"><button class="send">Send</button></form>
+<div id="status">starting…</div>
+<script src="/app.js"></script></main></body></html>
