@@ -1,0 +1,2 @@
+{ "name": "pollroom", "version": "1.0.0", "license": "MIT", "scripts": { "build": "node build.mjs" },
+  "dependencies": { "@nexconn/chat": "latest", "@nexconn/engine": "latest" }, "devDependencies": { "esbuild": "latest" } }
