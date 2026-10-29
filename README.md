@@ -23,9 +23,9 @@ A live chat room where anyone can drop a poll and watch votes land in real time.
 2. Put your App Key and your data center API host in `worker.tpl.js`.
 3. `npm install && npm run build`, then deploy `worker.js` as a Cloudflare Worker with a secret binding named `NX_SECRET` holding your App Secret.
 
-## Private rooms
+## Named rooms
 
-Open `/?room=my-room` (3 to 32 lowercase letters, digits or dashes) for a separate room with its own history. Without the parameter you join the public lobby.
+Open `/?room=my-room` (3 to 32 lowercase letters, digits or dashes) for a separate room with its own history. The name is not access control: anyone who knows it can join. Without the parameter you join the public lobby.
 
 ## Demo tooling
 
